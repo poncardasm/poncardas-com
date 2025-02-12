@@ -31,3 +31,4 @@ Thumbs.db
 # Others
 vercel.json
 netlify.toml
+.nvmrc
