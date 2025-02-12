@@ -6,7 +6,7 @@ export default {
 	author: {
 		name: "Mchael Poncardas",
 		email: "poncardasm@fastmail.com",
-		url: "https://www.poncardas.com/about-me/",
+		url: "https://www.poncardas.com/about/",
 	},
 	social: {
 		twitter: "https://twitter.com/poncardasm",
