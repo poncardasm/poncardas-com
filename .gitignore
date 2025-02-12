@@ -1,4 +1,33 @@
-_site/
+# Dependency directories
 node_modules/
-package-lock.json
-.cache
+.nvmrc
+
+# Build output
+_site/
+dist/
+
+# Cache files
+.cache/
+
+# Environment files
+.env
+.env.local
+
+# Logs
+*.log
+
+# IDE/Editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+
+# Others
+vercel.json
+netlify.toml

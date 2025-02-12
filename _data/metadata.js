@@ -1,11 +1,17 @@
 export default {
-	title: "Eleventy Base Blog v9",
-	url: "https://example.com/",
+	title: "Mchael Poncardas",
+	url: "https://www.poncardas.com/", // Updated to match the author's URL
 	language: "en",
-	description: "I am writing about my experiences as a naval navel-gazer.",
+	description: "I'm Mac! Welcome to my corner of the internet.",
 	author: {
-		name: "Your Name Here",
-		email: "youremailaddress@example.com",
-		url: "https://example.com/about-me/"
-	}
-}
+		name: "Mchael Poncardas",
+		email: "poncardasm@fastmail.com",
+		url: "https://www.poncardas.com/about-me/", // Updated to use the correct URL
+	},
+	social: {
+		twitter: "https://twitter.com/poncardasm", // Added social media link
+		github: "https://github.com/poncardasm", // Added GitHub profile link
+		linkedin: "https://www.linkedin.com/in/poncardas", // Added LinkedIn profile link
+	},
+	currentYear: new Date().getFullYear(),
+};
