@@ -51,7 +51,6 @@ body {
 	margin: 0 auto;
 	font-family: var(--font-family);
 	color: var(--gray-900);
-	background-color: var(--gray-25);
 }
 html {
 	overflow-y: scroll;

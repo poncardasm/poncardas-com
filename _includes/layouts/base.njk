@@ -7,8 +7,11 @@
 		<meta name="description" content="{{ description or metadata.description }}">
 		
 		{# Open Graph meta tags #}
-		<meta property="og:title" content="{{ title or metadata.title }}">
+		<meta property="og:title" content="{% if eleventyNavigation.key %}{{ eleventyNavigation.key }} | {{ metadata.title }}{% else %}{{ title or metadata.title }}{% endif %}">
 		<meta property="og:description" content="{{ description or metadata.description }}">
+		<meta property="og:url" content="{{page.url}}" />
+		<meta property="og:type" content="article" />
+		{# <meta property="og:logo" content="your value" /> #}
 		{% if image %}
         <meta property="og:image" content="{{ image | contentImgUrlFilter | absoluteUrl(metadata.url) }}" />
     {% endif %}
