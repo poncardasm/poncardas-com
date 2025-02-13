@@ -203,6 +203,7 @@ pre[class*="language-"] {
 	white-space: pre-wrap;
 	word-wrap: break-word;
 	overflow-wrap: break-word; /* For Firefox */
+	font-size: 1rem; /* 16px /16 */
 }
 
 /* Header */

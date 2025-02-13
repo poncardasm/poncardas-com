@@ -1,6 +1,8 @@
 ---js
 const eleventyNavigation = {
 	key: "Now",
+	parent: "_hidden",
+	hidden: true
 };
 ---
 

@@ -165,7 +165,8 @@ async function contentImgUrlFilter(src) {
 
 	const stats = await Image(imagePath, {
 		widths: [1200], // Width for Open Graph image
-		formats: ["jpg", "png"],
+		// formats: ["jpg", "png"],
+		formats: ["png"],
 		outputDir: outputDir, // Output directory
 		urlPath: urlPath, // Public URL path
 		filenameFormat: function (hash, src, width, format) {
