@@ -5,7 +5,7 @@ export default {
 	description: "I'm Mac! Welcome to my little corner of the internet.",
 	author: {
 		name: "Mchael Poncardas",
-		email: "poncardasm@fastmail.com",
+		email: "poncardas@fastmail.com",
 		url: "https://www.poncardas.com/about/",
 	},
 	social: {

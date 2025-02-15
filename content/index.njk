@@ -5,14 +5,14 @@ const eleventyNavigation = {
 	hidden: true
 };
 
-const numberOfLatestPostsToShow = 5;
+const numberOfLatestPostsToShow = 8;
 ---
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 {# <h2>Recent {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h2> #}
 
 <h2>Hello World!</h2>
-<p>I'm Mac! Welcome to my corner of the internet.</p>
+<p>I'm Mac! Welcome to my little corner of the internet.</p>
 <p>Here, I share my learning journey, tutorials, and guides to help others, along with projects I'm passionate about.</p>
 
 <h2>Recent Posts</h2>
