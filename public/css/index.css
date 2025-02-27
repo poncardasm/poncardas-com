@@ -256,35 +256,21 @@ header {
 .postlist {
 	list-style: none;
 	padding: 0;
-	padding-left: 1.5rem;
 }
 .postlist-item {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: baseline;
-	counter-increment: start-from -1;
 	margin-bottom: 1rem;
 }
-.postlist-item:before {
-	display: inline-block;
-	pointer-events: none;
-	content: "" counter(start-from, decimal-leading-zero) ". ";
-	line-height: 100%;
-	text-align: right;
-	margin-left: -1.5rem;
-}
-.postlist-date,
-.postlist-item:before {
+.postlist-date {
 	font-size: 0.8125rem; /* 13px /16 */
 	color: var(--gray-700);
-}
-.postlist-date {
 	word-spacing: -0.5px;
 }
 .postlist-link {
 	/* font-weight: 700; */
-	flex-basis: calc(100% - 1.5rem);
-	padding-left: 0.25rem;
+	flex-basis: 100%;
 	padding-right: 0.5rem;
 	text-underline-position: from-font;
 	text-underline-offset: 0;
