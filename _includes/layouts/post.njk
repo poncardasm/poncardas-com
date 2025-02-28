@@ -14,7 +14,9 @@ layout: layouts/base.njk
 	{%- endfor %}
 </ul>
 
+<div class="post-content">
 {{ content | safe }}
+</div>
 
 {%- for tag in tags | filterTagList %}
 	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}

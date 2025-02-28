@@ -14,6 +14,9 @@
 		<link rel="shortcut icon" href="./favicon/favicon.ico">
 		<meta name="theme-color" content="#ffffff">
 		
+		{# PhotoSwipe #}
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.min.css">
+		
 		{# Open Graph meta tags #}
 		<meta property="og:title" content="{% if eleventyNavigation.key %}{{ eleventyNavigation.key }} | {{ metadata.title }}{% else %}{{ title or metadata.title }}{% endif %}">
 		<meta property="og:description" content="{{ description or metadata.description }}">
@@ -47,6 +50,7 @@
 		{%- css %}/* This is an arbitrary CSS string added to the bundle */{% endcss %}
 		{#- Add the contents of a file to the bundle #}
 		{%- css %}{% include "public/css/index.css" %}{% endcss %}
+		{%- css %}{% include "public/css/lightbox.css" %}{% endcss %}
 		{#- Or you can add from node_modules #}
 		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
 
@@ -93,5 +97,96 @@
 
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
+		<script type="module" src="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.esm.min.js"></script>
+		<script type="module">
+			import PhotoSwipe from 'https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.esm.min.js';
+			
+			document.addEventListener('DOMContentLoaded', function() {
+				const postContent = document.querySelector('.post-content');
+				
+				if (!postContent) {
+					return;
+				}
+				
+				const images = postContent.querySelectorAll('img');
+				
+				images.forEach((image) => {
+					// Create wrapper if not already wrapped
+					if (!image.parentElement.matches('a')) {
+						const link = document.createElement('a');
+						link.href = image.src;
+						link.style.cursor = 'pointer';
+						link.dataset.pswpWidth = image.naturalWidth || 1200;
+						link.dataset.pswpHeight = image.naturalHeight || 800;
+						
+						// Wait for image to load to get actual dimensions
+						if (image.complete) {
+							link.dataset.pswpWidth = image.naturalWidth;
+							link.dataset.pswpHeight = image.naturalHeight;
+						} else {
+							image.onload = () => {
+								link.dataset.pswpWidth = image.naturalWidth;
+								link.dataset.pswpHeight = image.naturalHeight;
+							};
+						}
+						
+						image.parentNode.insertBefore(link, image);
+						link.appendChild(image);
+						
+						// Add click handler
+						link.addEventListener('click', (e) => {
+							e.preventDefault();
+							const options = {
+								dataSource: [{
+									src: image.src,
+									width: parseInt(link.dataset.pswpWidth, 10),
+									height: parseInt(link.dataset.pswpHeight, 10),
+									alt: image.alt
+								}],
+								pswpModule: PhotoSwipe
+							};
+							const lightbox = new PhotoSwipe(options);
+							lightbox.init();
+						});
+					}
+				});
+			});
+		</script>
+		
+		{# PhotoSwipe root element #}
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="pswp__bg"></div>
+			<div class="pswp__scroll-wrap">
+				<div class="pswp__container">
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+				</div>
+				<div class="pswp__ui pswp__ui--hidden">
+					<div class="pswp__top-bar">
+						<div class="pswp__counter"></div>
+						<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+						<button class="pswp__button pswp__button--share" title="Share"></button>
+						<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+						<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+						<div class="pswp__preloader">
+							<div class="pswp__preloader__icn">
+								<div class="pswp__preloader__cut">
+									<div class="pswp__preloader__donut"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+						<div class="pswp__share-tooltip"></div>
+					</div>
+					<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+					<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+					<div class="pswp__caption">
+						<div class="pswp__caption__center"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

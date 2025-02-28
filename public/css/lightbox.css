@@ -1,0 +1,38 @@
+.post-content img {
+	cursor: pointer;
+	transition: opacity 0.3s ease;
+}
+
+.post-content img:hover {
+	opacity: 0.8;
+}
+
+/* PhotoSwipe overrides */
+.pswp__img {
+	object-fit: contain;
+	background: #fff;
+}
+
+.pswp__bg {
+	background: rgba(0, 0, 0, 0.9);
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
+}
+
+.pswp--open .pswp__bg {
+	opacity: 1;
+}
+
+.pswp__ui--fit .pswp__top-bar,
+.pswp__ui--fit .pswp__caption {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Fix for initial loading state */
+.pswp.pswp--open {
+	display: block;
+}
+
+.pswp {
+	transition: opacity 0.3s ease;
+}
