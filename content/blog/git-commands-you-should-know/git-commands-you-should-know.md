@@ -8,7 +8,7 @@ image: og-img-git-commands.png
 
 <img src="./git-session.png" alt="Git commands you should know banner image">
 
-Here’s a list of the most important Git commands you should know, using the latest Git commands (as of Git 2.23+).
+Here’s a list of the most important Git commands you should know, using the latest Git version (as of Git 2.23+).
 
 These commands cover most of the day-to-day tasks you'll encounter when working with Git repositories.
 
