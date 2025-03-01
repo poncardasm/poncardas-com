@@ -12,7 +12,7 @@ Here’s a list of the most important Git commands you should know, using the la
 
 These commands cover most of the day-to-day tasks you'll encounter when working with Git repositories.
 
-## 1. Setting Up Git
+## Setting Up Git
 
 Set your username:
 
@@ -32,7 +32,7 @@ Check your configuration:
 git config --list
 ```
 
-## 2. Repository Basics
+## Repository Basics
 
 Initialize a new repository:
 
@@ -46,7 +46,7 @@ Clone an existing repository:
 git clone <repository-url>
 ```
 
-## 3. Checking Repository Status
+## Checking Repository Status
 
 Check the status of your repository:
 
@@ -54,7 +54,7 @@ Check the status of your repository:
 git status
 ```
 
-## 4. Working with Files
+## Working with Files
 
 Track a new file:
 
@@ -80,7 +80,7 @@ Discard changes in a file (unstaged):
 git restore <file-name>
 ```
 
-## 5. Checking Repository Status
+## Checking Repository Status
 
 Check the status of your repository:
 
@@ -100,7 +100,7 @@ Amend the last commit (e.g., to fix the message):
 git commit --amend
 ```
 
-## 6. Branching
+## Branching
 
 Create and switch to a new branch:
 
@@ -132,7 +132,7 @@ Force delete a local branch:
 git branch -D <branch-name>
 ```
 
-## 7. Merging
+## Merging
 
 Merge a branch into the current branch:
 
@@ -146,12 +146,20 @@ Abort a merge (if there are conflicts):
 git merge --abort
 ```
 
-## 8. Working with Remote Repositories
+## Working with Remote Repositories
 
 Add a remote repository:
 
 ```bash
 git remote add origin <repository-url>
+```
+
+Push an existing repository to Github
+
+```bash
+git remote add origin git@github.com:username/repository.git
+git branch -M main
+git push -u origin main
 ```
 
 List remote repositories:
@@ -178,7 +186,7 @@ Fetch changes from the remote repository (without merging):
 git fetch origin
 ```
 
-## 9. Viewing History
+## Viewing History
 
 View commit history:
 
@@ -204,7 +212,7 @@ View changes in staged files:
 git diff --staged
 ```
 
-## 10. Undoing Changes
+## Undoing Changes
 
 Undo unstaged changes in a file:
 
@@ -236,7 +244,7 @@ Revert a specific commit:
 git revert <commit-hash>
 ```
 
-## 11. Tagging
+## Tagging
 
 Create a tag:
 
@@ -256,7 +264,7 @@ List all tags:
 git tag
 ```
 
-## 12. Cleaning Up
+## Cleaning Up
 
 Remove untracked files:
 
@@ -270,7 +278,7 @@ Remove untracked files and directories:
 git clean -fd
 ```
 
-## 13. Collaboration
+## Collaboration
 
 Rebase your branch onto another branch:
 
@@ -296,7 +304,7 @@ List stashes:
 git stash list
 ```
 
-## 14. Deleting Remote Branches
+## Deleting Remote Branches
 
 Delete a branch from the remote repository:
 
@@ -304,7 +312,7 @@ Delete a branch from the remote repository:
 git push origin --delete <branch-name>
 ```
 
-## 15. Checking Help
+## Checking Help
 
 Get help for a Git command:
 
