@@ -6,6 +6,6 @@ const eleventyNavigation = {
 };
 ---
 
-<h2> Now</h2>
+<h1> Now</h1>
 
 This is a test page for the now page.

@@ -1,11 +1,11 @@
 ---js
 const eleventyNavigation = {
  key: "About",
- order: 3
+ order: 4
 }
 ---
 
-<h2> About Me</h2>
+<h1> About Me</h1>
 
 I'm Mac! Welcome to my corner of the internet.
 
