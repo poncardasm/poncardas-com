@@ -34,6 +34,28 @@
 	--blue-700: #175cd3;
 	--blue-800: #1849a9;
 	--blue-900: #194185;
+
+	/* Theme variables */
+	--bg-color: var(--gray-25);
+	--text-color: var(--gray-900);
+	--border-color: var(--gray-200);
+	--link-color: var(--blue-600);
+	--link-hover-color: var(--blue-700);
+	--blockquote-bg: var(--gray-50);
+	--blockquote-border: var(--gray-300);
+	--blockquote-text: var(--gray-700);
+}
+
+/* Dark theme colors */
+[data-theme="dark"] {
+	--bg-color: var(--gray-900);
+	--text-color: var(--gray-100);
+	--border-color: var(--gray-700);
+	--link-color: var(--blue-400);
+	--link-hover-color: var(--blue-300);
+	--blockquote-bg: var(--gray-800);
+	--blockquote-border: var(--gray-600);
+	--blockquote-text: var(--gray-300);
 }
 
 /* Global stylesheet */
@@ -50,14 +72,39 @@ body {
 	padding: 0;
 	margin: 0 auto;
 	font-family: var(--font-family);
-	color: var(--gray-900);
+	color: var(--text-color);
+	background-color: var(--bg-color);
 }
+
 html {
 	overflow-y: scroll;
 }
+
 body {
 	font-size: 1.125rem; /* 16px /16 */
 	max-width: 48rem;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+	background: none;
+	border: none;
+	padding: 0.5rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	color: var(--text-color);
+	font-size: 1rem;
+}
+
+.theme-toggle:hover {
+	opacity: 0.8;
+}
+
+.theme-toggle svg {
+	width: 1.2rem;
+	height: 1.2rem;
+	margin-right: 0.25rem;
 }
 
 /* Heading */
@@ -68,6 +115,7 @@ h4,
 h5,
 h6 {
 	font-weight: 500;
+	color: var(--text-color);
 }
 
 h2,
@@ -123,14 +171,14 @@ li {
 }
 
 a[href] {
-	color: var(--text-color-link);
+	color: var(--link-color);
 }
 a[href]:visited {
-	color: var(--text-color-link-visited);
+	color: var(--link-color);
 }
 a[href]:hover,
 a[href]:active {
-	color: var(--blue-700);
+	color: var(--link-hover-color);
 }
 
 main,
@@ -156,7 +204,7 @@ main :first-child {
 	justify-content: space-between;
 	gap: 0.5rem 1rem;
 	list-style: "";
-	border-top: 1px solid var(--gray-200);
+	border-top: 1px solid var(--border-color);
 	padding: 1rem 0;
 }
 .links-nextprev > * {
@@ -172,6 +220,7 @@ table {
 table td,
 table th {
 	padding-right: 1rem;
+	color: var(--text-color);
 }
 
 pre,
@@ -193,6 +242,9 @@ pre:not([class*="language-"]) {
 	word-spacing: normal;
 	word-break: normal;
 	overflow-x: auto;
+	background-color: var(--blockquote-bg);
+	padding: 1rem;
+	border-radius: 4px;
 }
 code {
 	word-break: break-all;
@@ -202,8 +254,8 @@ code[class*="language-"],
 pre[class*="language-"] {
 	white-space: pre-wrap;
 	word-wrap: break-word;
-	overflow-wrap: break-word; /* For Firefox */
-	font-size: 1rem; /* 16px /16 */
+	overflow-wrap: break-word;
+	font-size: 1rem;
 }
 
 /* Header */
@@ -214,19 +266,18 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem;
-	font-size: 1.25rem; /* 20px /16 */
+	font-size: 1.25rem;
 	margin-top: 2rem;
-	border-bottom: 1px solid var(--gray-200);
+	border-bottom: 1px solid var(--border-color);
 }
 .home-link {
-	/* flex-grow: 1; */
 	font-weight: 500;
 	padding-right: 4rem;
 }
 
 .home-link:hover {
 	text-decoration: none;
-	color: var(--gray-900) !important;
+	color: var(--text-color) !important;
 }
 
 .home-link:link:not(:hover) {
@@ -243,7 +294,7 @@ header {
 }
 .nav-item {
 	display: inline-block;
-	font-size: 1.125rem; /* 18px /16 */
+	font-size: 1.125rem;
 }
 .nav-item a[href]:not(:hover) {
 	text-decoration: none;
@@ -264,12 +315,11 @@ header {
 	margin-bottom: 1rem;
 }
 .postlist-date {
-	font-size: 0.8125rem; /* 13px /16 */
-	color: var(--gray-700);
+	font-size: 0.8125rem;
+	color: var(--text-color);
 	word-spacing: -0.5px;
 }
 .postlist-link {
-	/* font-weight: 700; */
 	flex-basis: 100%;
 	padding-right: 0.5rem;
 	text-underline-position: from-font;
@@ -290,8 +340,7 @@ header {
 	justify-content: center;
 	text-transform: lowercase;
 	text-decoration: none;
-	color: var(--gray-500) !important;
-	/* font-style: italic; */
+	color: var(--text-color) !important;
 	margin-right: 0.5rem;
 }
 .postlist-item > .post-tag {
@@ -313,10 +362,10 @@ header {
 
 /* Blockquote */
 blockquote {
-	font-style: italic; /* Optional: Italicize the text */
-	color: var(--gray-700); /* Use a softer gray for the text */
-	border-left: 4px solid var(--gray-300); /* Light left border */
-	margin: 1rem 0; /* Space around the blockquote */
-	padding: 0.5em 1em; /* Padding inside the blockquote */
-	background-color: var(--gray-50); /* Soft background */
+	font-style: italic;
+	color: var(--blockquote-text);
+	border-left: 4px solid var(--blockquote-border);
+	margin: 1rem 0;
+	padding: 0.5em 1em;
+	background-color: var(--blockquote-bg);
 }
