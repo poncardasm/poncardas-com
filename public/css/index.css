@@ -39,6 +39,7 @@
 	--bg-color: var(--gray-25);
 	--text-color: var(--gray-900);
 	--border-color: var(--gray-200);
+	--p-color: var(--gray-700);
 	--link-color: var(--blue-600);
 	--link-hover-color: var(--blue-700);
 	--blockquote-bg: var(--gray-50);
@@ -50,6 +51,7 @@
 [data-theme="dark"] {
 	--bg-color: var(--gray-900);
 	--text-color: var(--gray-100);
+	--p-color: var(--gray-100);
 	--border-color: var(--gray-700);
 	--link-color: var(--blue-400);
 	--link-hover-color: var(--blue-300);
@@ -162,7 +164,7 @@ iframe {
 
 /* Paragraphs */
 p {
-	color: var(--gray-700);
+	color: var(--p-color);
 }
 p:last-child {
 	margin-bottom: 0;
