@@ -139,6 +139,7 @@ h6 {
 
 /* Fluid images via https://www.zachleat.com/web/fluid-images/ */
 img {
+	border-radius: 0.3em;
 	max-width: 100%;
 	margin-top: 1rem;
 }
@@ -159,6 +160,10 @@ iframe {
 	aspect-ratio: 16/9;
 }
 
+/* Paragraphs */
+p {
+	color: var(--gray-700);
+}
 p:last-child {
 	margin-bottom: 0;
 }
