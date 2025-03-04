@@ -15,7 +15,7 @@ const numberOfLatestPostsToShow = 8;
 <p>I'm Mac! Welcome to my little corner of the internet.</p>
 <p>Here, I share my learning journey, tutorials, and guides to help others, along with projects I'm passionate about.</p>
 
-<h2>Recent Posts</h2>
+<h2>Latest Posts</h2>
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
 {% include "postslist.njk" %}
