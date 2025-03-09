@@ -235,8 +235,8 @@ code {
 	font-family: var(--font-family-monospace);
 	background-color: #272822;
 	color: #e6db74;
-	padding-left: 0.25rem;
-	padding-right: 0.25rem;
+	/* padding-left: 0.25rem;
+	padding-right: 0.25rem; */
 	border-radius: 0.25rem;
 	font-size: 1rem;
 }
