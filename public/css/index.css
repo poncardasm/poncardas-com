@@ -173,9 +173,18 @@ p {
 	line-height: 1.5;
 }
 
+/* Lists */
+
 li {
 	line-height: 1.5;
+	margin-top: .5rem;
 }
+
+a {
+    text-decoration: none;
+}
+
+
 
 a[href] {
 	color: var(--link-color);
