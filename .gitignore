@@ -33,3 +33,5 @@ vercel.json
 netlify.toml
 .nvmrc
 .github/
+.obsidian
+_templates/
