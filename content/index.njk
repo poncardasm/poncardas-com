@@ -1,11 +1,16 @@
 ---js
-const eleventyNavigation = {
-	key: "Home",
-	parent: "_hidden",
-	hidden: true
-};
-
-const numberOfLatestPostsToShow = 8;
+{
+  eleventyNavigation: {
+    key: "Home",
+    parent: "_hidden",
+    hidden: true
+  },
+  numberOfLatestPostsToShow: 8,
+  title: "Mchael Poncardas",
+  description: "My little corner of the internet where I share my learning journey, write tutorials and guides to help others, and showcase projects I'm passionate about.",
+  image: "../public/img/ogimg-main.png",
+  url: "https://poncardas.com/"
+}
 ---
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
