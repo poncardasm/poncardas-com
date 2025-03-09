@@ -12,7 +12,7 @@ The `hosts` file on macOS is a powerful tool for mapping domain names to specifi
 
 ## 1. Open the Terminal
 
-You can find Terminal in `Applications > Utilities > Terminal`, or just search for it using Spotlight (`Cmd + Space`).
+You can find Terminal in `Applications > Utilities > Terminal`, or just search for it using Spotlight `Cmd + Space`
 
 ## 2. Launch Nano with Sudo
 
