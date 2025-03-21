@@ -122,7 +122,7 @@ h5,
 h6 {
 	font-weight: 500;
 	color: var(--text-color);
-	font-family: 'Space Grotesk', sans-serif;
+	/* font-family: 'Space Grotesk', sans-serif; */
 
 }
 
@@ -302,7 +302,7 @@ header {
 	font-size: 1.25rem;
 	margin-top: 2rem;
 	border-bottom: 1px solid var(--border-color);
-	font-family: 'Space Grotesk', sans-serif;
+	/* font-family: 'Space Grotesk', sans-serif; */
 }
 
 header a {
@@ -347,23 +347,32 @@ header a {
 	padding: 0;
 }
 .postlist-item {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: baseline;
-	margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
+
 .postlist-date {
-	font-size: 1rem;
-	color: var(--text-color);
-	word-spacing: -0.5px;
+    font-size: 1rem;
+    color: var(--text-color);
+    word-spacing: -0.5px;
+    min-width: 100px;
 }
+
 .postlist-link {
-	flex-basis: 100%;
-	padding-right: 0.5rem;
-	text-underline-position: from-font;
-	text-underline-offset: 0;
-	text-decoration-thickness: 1px;
-	text-decoration: none;
+    flex: 1;
+    padding-right: 0.5rem;
+    text-underline-position: from-font;
+    text-underline-offset: 0;
+    text-decoration-thickness: 1px;
+    text-decoration: none;
+}
+
+a.postlist-link {
+	margin-top: 0;
 }
 
 .postlist-link:hover .postlist-item-active .postlist-link {
