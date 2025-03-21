@@ -9,7 +9,7 @@ const eleventyNavigation = {
 
 A hand-picked collection of my go-to tools for getting stuff done. They double as my personal bookmark stash. Hope you find ‘em as handy as I do!
 
-## Tech Support
+## 🧰 Tech Support
 
 - <a href="https://clean-url.pages.dev/" target="_blank">Clean URL</a> - Remove tracking parameters and unnecessary parts from your URLs.
 - <a href="https://github.com/poncardasm/tech-support-tools/tree/main/backup-script" target="_blank">Backup script</a> - For macOS, Linux and Windows.
@@ -21,12 +21,12 @@ A hand-picked collection of my go-to tools for getting stuff done. They double a
 - <a href="https://clock-7hk.pages.dev/" target="_blank">World Clock</a> - Displays real-time clocks for multiple time
 zones.
 
-## Web design & development
+## 🧑‍💻 Web design & development
 
 - <a href="https://favicon.io/" target="_blank">Favicon.io</a> - Favicon Generator
 - <a href="https://webflow.com/" target="_blank">Webflow</a> - Website builder. 
 
-## AI
+## 🤖 AI
 
 - <a href="https://chatgpt.com/" target="_blank">ChatGPT</a> - OpenAI model
 - <a href="https://chat.mistral.ai/" target="_blank">Le Chat</a> - Mistral AI from Europe.
