@@ -101,16 +101,28 @@ body {
 	align-items: center;
 	color: var(--text-color);
 	font-size: 1rem;
+	margin-left: 0.5rem;
+	border-radius: 0.25rem;
+	transition: background-color 0.2s ease;
 }
 
 .theme-toggle:hover {
-	opacity: 0.8;
+	background-color: var(--border-color);
 }
 
 .theme-toggle svg {
 	width: 1.2rem;
 	height: 1.2rem;
-	margin-right: 0.25rem;
+}
+
+.theme-toggle .sun-icon,
+.theme-toggle .moon-icon {
+	transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover .sun-icon,
+.theme-toggle:hover .moon-icon {
+	transform: rotate(15deg);
 }
 
 /* Heading */
@@ -123,7 +135,6 @@ h6 {
 	font-weight: 500;
 	color: var(--text-color);
 	/* font-family: 'Space Grotesk', sans-serif; */
-
 }
 
 h2,
@@ -347,28 +358,28 @@ header a {
 	padding: 0;
 }
 .postlist-item {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
 }
 
 .postlist-date {
-    font-size: 1rem;
-    color: var(--text-color);
-    word-spacing: -0.5px;
-    min-width: 100px;
+	font-size: 1rem;
+	color: var(--text-color);
+	word-spacing: -0.5px;
+	min-width: 100px;
 }
 
 .postlist-link {
-    flex: 1;
-    padding-right: 0.5rem;
-    text-underline-position: from-font;
-    text-underline-offset: 0;
-    text-decoration-thickness: 1px;
-    text-decoration: none;
+	flex: 1;
+	padding-right: 0.5rem;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+	text-decoration: none;
 }
 
 a.postlist-link {
