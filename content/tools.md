@@ -1,7 +1,10 @@
 ---js
-const eleventyNavigation = {
- key: "Tools",
- order: 3
+{
+    eleventyNavigation: {
+        key: "Tools",
+        order: 3
+    },
+    title: "Tools"
 }
 ---
 
