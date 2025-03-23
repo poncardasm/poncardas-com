@@ -106,9 +106,9 @@ body {
 	transition: background-color 0.2s ease;
 }
 
-.theme-toggle:hover {
+/* .theme-toggle:hover {
 	background-color: var(--border-color);
-}
+} */
 
 .theme-toggle svg {
 	width: 1.2rem;
@@ -342,14 +342,21 @@ header a {
 	list-style: none;
 }
 .nav-item {
-	display: inline-block;
+	display: flex;
+	align-items: center;
 	font-size: 1.125rem;
+	margin-top: 0;
 }
+
+header nav .nav .nav-item:hover a {
+	color: var(--link-hover-color) !important;
+}
+
 .nav-item a[href]:not(:hover) {
 	text-decoration: none;
 }
 .nav a[href][aria-current="page"] {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 /* Posts list */
