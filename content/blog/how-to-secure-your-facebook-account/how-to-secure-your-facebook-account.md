@@ -3,7 +3,7 @@ title: How to Secure Your Facebook Account
 description: I decided to write this post so I don't have to keep repeating instructions on how to secure and protect their Facebook accounts.
 date: 2025-03-24
 tags: ["cybersecurity", "social-media"]
-image: ogimg-hosts-file-macos.png
+image: ogimg-secure-fb.png
 ---
 
 <img src="./brett-jordan-EefRxCpIxnA-unsplash.jpg" alt="Facebook app icon">
