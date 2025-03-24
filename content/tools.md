@@ -10,7 +10,7 @@
 
 # Tools
 
-A hand-picked collection of my go-to tools for getting stuff done. They double as my personal bookmark stash. Hope you find ‘em as handy as I do!
+A collection of my go-to tools for getting stuff done. They double as my personal bookmark stash. Hope you find ‘em as handy as I do!
 
 ## 🧰 Tech Support
 
@@ -22,12 +22,12 @@ A hand-picked collection of my go-to tools for getting stuff done. They double a
 - <a href="https://it-tools.tech/uuid-generator" target="_blank">UUID Generator</a> - Generate a 128-bit number used to identify information in computer systems.
 - <a href="https://app.diagrams.net/" target="_blank">Diagrams.net</a> - Diagram and flowchart maker.
 - <a href="https://clock-7hk.pages.dev/" target="_blank">World Clock</a> - Displays real-time clocks for multiple time
-zones.
+  zones.
 
 ## 🧑‍💻 Web design & development
 
 - <a href="https://favicon.io/" target="_blank">Favicon.io</a> - Favicon Generator
-- <a href="https://webflow.com/" target="_blank">Webflow</a> - Website builder. 
+- <a href="https://webflow.com/" target="_blank">Webflow</a> - Website builder.
 
 ## 🤖 AI
 

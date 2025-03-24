@@ -93,5 +93,3 @@ sudo cp /etc/hosts /etc/hosts.bak
 
 - **Permissions**: If you see "permission denied" even with `sudo`, check if your user has admin rights.
 - **Format**: Make sure there's at least one tab or space between the IP and hostname. Don’t use spaces in hostnames.
-
-That’s it! Your new entry should now be active.

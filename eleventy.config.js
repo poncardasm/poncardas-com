@@ -97,6 +97,14 @@ export default async function (eleventyConfig) {
 		},
 	});
 
+	eleventyConfig.addFilter("fullDate", (dateObj) => {
+		return new Date(dateObj).toLocaleDateString("en-US", {
+			year: "numeric",
+			month: "long",
+			day: "numeric",
+		});
+	});
+
 	// Filters
 	eleventyConfig.addPlugin(pluginFilters);
 
