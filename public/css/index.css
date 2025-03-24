@@ -167,30 +167,30 @@
 
 	/* White Theme variables */
 	--bg-color: var(--flexoki-paper);
-	--text-color: var(--gray-900);
+	--color-text-normal: var(--flexoki-black);
 	--border-color: var(--gray-200);
 	--p-color: var(--gray-700);
-	--link-color: var(--blue-600);
-	--link-hover-color: var(--blue-700);
+	--link-color: var(--flexoki-cyan-600);
+	--link-hover-color: var(--flexoki-cyan-600);
 	--blockquote-bg: var(--gray-50);
 	--blockquote-border: var(--gray-300);
 	--blockquote-text: var(--gray-700);
-	--bg-code-color: var(--gray-200);
+	--color-bg-code: var(--flexoki-yellow-100);
 	--text-code-color: var(--gray-900);
 }
 
 /* Dark theme colors */
 [data-theme="dark"] {
 	--bg-color: var(--gray-900);
-	--text-color: var(--gray-25);
+	--color-text-normal: var(--gray-25);
 	--p-color: var(--gray-300);
 	--border-color: var(--gray-700);
-	--link-color: var(--blue-400);
-	--link-hover-color: var(--blue-300);
+	--link-color: var(--flexoki-cyan-400);
+	--link-hover-color: var(--flexoki-cyan-400);
 	--blockquote-bg: var(--gray-800);
 	--blockquote-border: var(--gray-600);
 	--blockquote-text: var(--gray-300);
-	--bg-code-color: var(--gray-700);
+	--color-bg-code: var(--flexoki-yellow-850);
 	--text-code-color: var(--gray-100);
 }
 
@@ -208,7 +208,7 @@ body {
 	padding: 0;
 	margin: 0 auto;
 	font-family: var(--font-family);
-	color: var(--text-color);
+	color: var(--color-text-normal);
 	background-color: var(--bg-color);
 }
 
@@ -229,7 +229,7 @@ body {
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-	color: var(--text-color);
+	color: var(--color-text-normal);
 	font-size: 1rem;
 	margin-left: 0.5rem;
 	border-radius: 0.25rem;
@@ -263,7 +263,7 @@ h4,
 h5,
 h6 {
 	font-weight: 500;
-	color: var(--text-color);
+	color: var(--color-text-normal);
 	/* font-family: 'Space Grotesk', sans-serif; */
 }
 
@@ -276,7 +276,7 @@ h6 {
 }
 
 strong {
-	color: var(--text-color);
+	color: var(--color-text-normal);
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -338,7 +338,7 @@ a {
 
 a[href] {
 	/* color: var(--link-color); */
-	color: var(--text-color);
+	color: var(--color-text-normal);
 }
 
 /* a[href]:visited {
@@ -390,20 +390,21 @@ table {
 table td,
 table th {
 	padding-right: 1rem;
-	color: var(--text-color);
+	color: var(--color-text-normal);
 }
 
-pre,
-code {
+pre:not([class]),
+code:not([class]) {
 	font-family: var(--font-family-monospace);
 	/* background-color: #272822; */
 	/* color: #e6db74; */
-	background-color: var(--bg-code-color);
+	background-color: var(--color-bg-code);
 	color: var(--text-code-color);
 	padding: 0.15rem 0.3rem;
 	border-radius: 0.25rem;
 	font-size: 1rem;
 }
+
 pre:not([class*="language-"]) {
 	margin: 0.5rem 0;
 	line-height: 1.375rem; /* 22px /16 */
@@ -450,7 +451,7 @@ header {
 }
 
 header a {
-	color: var(--text-color) !important;
+	color: var(--color-text-normal) !important;
 }
 
 .home-link {
@@ -482,6 +483,7 @@ header a {
 
 header nav .nav .nav-item:hover a {
 	color: var(--link-hover-color) !important;
+	text-decoration: none;
 }
 
 .nav-item a[href]:not(:hover) {
@@ -507,7 +509,7 @@ header nav .nav .nav-item:hover a {
 
 .postlist-date {
 	font-size: 1rem;
-	color: var(--text-color);
+	color: var(--color-text-normal);
 	word-spacing: -0.5px;
 	min-width: 100px;
 }
@@ -537,7 +539,7 @@ a.postlist-link {
 	justify-content: center;
 	text-transform: lowercase;
 	text-decoration: none;
-	color: var(--text-color) !important;
+	color: var(--color-text-normal) !important;
 	margin-right: 0.5rem;
 }
 .postlist-item > .post-tag {
