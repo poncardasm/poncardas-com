@@ -31,28 +31,28 @@ Two-factor authentication adds an extra layer of security. Even if someone gets 
 
 ## 3. Avoid Common Scams
 
-Some red flags to watch for:
+Some red flags to watch out for:
 
 - **"Friend in need" scams**: A "friend" messages you asking for money because they're in an "emergency situation." Call them directly to verify, it's often a hacked account.
-- **Too-good-to-be-true offers**: Ads or posts promising free gift cards or prizes if you "click here" links are usually bait.
+- **Too-good-to-be-true offers**: Ads or posts promising free gift cards or prizes if you "click links" are usually bait.
 - **Quizzes and games**: Those "What's your spirit animal?" quizzes might be harvesting your personal info.
 
-**Stay safe**: Don't share sensitive details (like your phone number or address) in messages or posts, and report suspicious activity to Facebook.
+**Stay safe**: Don't share personal details (like your phone number or address) in messages or posts, and report suspicious activity to Facebook.
 
 ## 4. Lock Down Your Privacy Settings
 
 Scammers gather info from public profiles to craft convincing scams. Take a minute to tighten things up:
 
 1. Go to **Settings & Privacy** > **Privacy Checkup**.
-2. Adjust **Who can see your posts?** to "Friends" instead of "Public."
-3. Limit **Who can find you?** turn off search by phone number or email if you don't need it.
+2. Adjust **Who can see your posts?** from "Public" to "Friends".
+3. Limit **Who can find you?** turn off search by phone number or email.
 4. Review your **Profile Information** hide your birthday, hometown, or anything scammers could use.
 
 **Bonus**: Check **Apps and Websites** under Settings to revoke access from any third-party apps you don't use anymore.
 
 ## 5. Know What to Do If Something Goes Wrong
 
-    If you think your account has been hacked or you've fallen for a scam:
+If you think your account has been hacked or you've fallen for a scam:
 
 - **Change your password immediately** from a trusted device.
 - **Log out of all devices**: Go to **Security and Login** > **Where You're Logged In** and click "Log Out of All Sessions." `https://accountscenter.facebook.com/password_and_security/login_activity/`
