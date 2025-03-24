@@ -16,7 +16,7 @@ Your password is your first line of defense. If it's weak or you're using the sa
 
 - **Make it long and complex**: Aim for at least 12 characters, mixing letters (upper and lowercase), numbers, and symbols.
 - **Don't reuse passwords**: If a scammer gets your password from another site (like a data breach), they'll try it on Facebook too.
-- **Use a password manager**: Tools like LastPass or 1Password can generate and store strong passwords for you.
+- **Use a password manager**: Tools like 1Password can generate and store strong passwords for you.
 
 ## 2. Turn On Two-Factor Authentication (2FA)
 
