@@ -22,7 +22,7 @@ Your password is your first line of defense. If it's weak or you're using the sa
 
 Two-factor authentication adds an extra layer of security. Even if someone gets your password, they can't log in without a second code. Here's how to set it up:
 
-1. Go to **Meta Accounts Center** `https://accountscenter.facebook.com/`
+1. Go to **Meta Accounts Center** <https://accountscenter.facebook.com/>
 2. Click **Password and Security**
 3. Click **Two-factor authentication**
 4. Download an authenticator app (like Google Authenticator or iOS Passwords app), or security key, and follow the prompts.
@@ -55,7 +55,7 @@ Scammers gather info from public profiles to craft convincing scams. Take a minu
 If you think your account has been hacked or you've fallen for a scam:
 
 - **Change your password immediately** from a trusted device.
-- **Log out of all devices**: Go to **Security and Login** > **Where You're Logged In** and click "Log Out of All Sessions." `https://accountscenter.facebook.com/password_and_security/login_activity/`
-- **Report it**: Use Facebook's "Hacked Account" tool at `facebook.com/hacked`.
+- **Log out of all devices**: Go to **Security and Login** > **Where You're Logged In** and click "Log Out of All Sessions." <https://accountscenter.facebook.com/password_and_security/login_activity/>
+- **Report it**: Use Facebook's "Hacked Account" tool at <https://www.facebook.com/hacked>
 
 Be safe out there! ✌️

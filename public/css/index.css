@@ -166,8 +166,8 @@
 	--blue-900: #194185;
 
 	/* White Theme variables */
-	--bg-color: var(--flexoki-paper);
-	--color-text-normal: var(--flexoki-black);
+	--bg-color: var(--gray-25);
+	--color-tx-normal: var(--flexoki-black);
 	--border-color: var(--gray-200);
 	--p-color: var(--gray-700);
 	--link-color: var(--flexoki-cyan-600);
@@ -175,25 +175,25 @@
 	--blockquote-bg: var(--gray-50);
 	--blockquote-border: var(--gray-300);
 	--blockquote-text: var(--gray-700);
-	--color-bg-code: var(--flexoki-yellow-100);
+	--color-bg-code: var(--gray-200);
 	--text-code-color: var(--gray-900);
-	--color-tx-faint: var(--flexoki-300);
+	--color-tx-faint: var(--gray-500);
 }
 
 /* Dark theme colors */
 [data-theme="dark"] {
-	--bg-color: var(--gray-900);
-	--color-text-normal: var(--gray-25);
+	--bg-color: #0d0f14;
+	--color-tx-normal: var(--gray-25);
 	--p-color: var(--gray-300);
 	--border-color: var(--gray-700);
 	--link-color: var(--flexoki-cyan-400);
-	--link-hover-color: var(--flexoki-cyan-400);
+	--link-hover-color: var(--flexoki-cyan-300);
 	--blockquote-bg: var(--gray-800);
 	--blockquote-border: var(--gray-600);
 	--blockquote-text: var(--gray-300);
-	--color-bg-code: var(--flexoki-yellow-850);
+	--color-bg-code: #343841;
 	--text-code-color: var(--gray-100);
-	--color-tx-faint: var(--flexoki-700);
+	--color-tx-faint: var(--gray-400);
 }
 
 /* Global stylesheet */
@@ -210,7 +210,7 @@ body {
 	padding: 0;
 	margin: 0 auto;
 	font-family: var(--font-family);
-	color: var(--color-text-normal);
+	color: var(--color-tx-normal);
 	background-color: var(--bg-color);
 }
 
@@ -231,7 +231,7 @@ body {
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-	color: var(--color-text-normal);
+	color: var(--color-tx-normal);
 	font-size: 1rem;
 	margin-left: 0.5rem;
 	border-radius: 0.25rem;
@@ -265,7 +265,7 @@ h4,
 h5,
 h6 {
 	font-weight: 500;
-	color: var(--color-text-normal);
+	color: var(--color-tx-normal);
 	/* font-family: 'Space Grotesk', sans-serif; */
 }
 
@@ -278,7 +278,7 @@ h6 {
 }
 
 strong {
-	color: var(--color-text-normal);
+	color: var(--color-tx-normal);
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -340,7 +340,7 @@ a {
 
 a[href] {
 	/* color: var(--link-color); */
-	color: var(--color-text-normal);
+	color: var(--color-tx-normal);
 }
 
 /* a[href]:visited {
@@ -393,7 +393,7 @@ table {
 table td,
 table th {
 	padding-right: 1rem;
-	color: var(--color-text-normal);
+	color: var(--color-tx-normal);
 }
 
 pre:not([class]),
@@ -431,12 +431,19 @@ code {
 	word-break: break-all;
 }
 
+/* Code Block */
 code[class*="language-"],
 pre[class*="language-"] {
 	white-space: pre-wrap;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	font-size: 1rem;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #17191e;
+	border: 1px solid #555864;
 }
 
 /* Header */
@@ -454,7 +461,7 @@ header {
 }
 
 header a {
-	color: var(--color-text-normal) !important;
+	color: var(--color-tx-normal) !important;
 }
 
 .home-link {
@@ -512,7 +519,7 @@ header nav .nav .nav-item:hover a {
 
 .postlist-date {
 	font-size: 1rem;
-	color: var(--color-text-normal);
+	color: var(--color-tx-normal);
 	word-spacing: -0.5px;
 	min-width: 100px;
 }
@@ -542,7 +549,7 @@ a.postlist-link {
 	justify-content: center;
 	text-transform: lowercase;
 	text-decoration: none;
-	color: var(--color-text-normal) !important;
+	color: var(--color-tx-normal) !important;
 	margin-right: 0.5rem;
 }
 .postlist-item > .post-tag {
@@ -563,13 +570,19 @@ a.postlist-link {
 }
 
 /* Blockquote */
-blockquote {
+/* blockquote {
 	font-style: italic;
 	color: var(--blockquote-text);
 	border-left: 4px solid var(--blockquote-border);
 	margin: 1rem 0;
 	padding: 0.5em 1em;
 	background-color: var(--blockquote-bg);
+} */
+
+blockquote {
+	padding-left: 1.5em;
+	margin: 1.5em 0;
+	border-left: 2px solid var(--color-tx-normal);
 }
 
 /* Bullet list style */

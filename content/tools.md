@@ -40,3 +40,4 @@ A collection of my go-to tools for getting stuff done. They double as my persona
 - <a href="https://www.perplexity.ai/" target="_blank">Perplexity</a> - Good for web searching.
 - <a href="https://huggingface.co/chat/" target="_blank">HuggingChat</a> - Open source AI models.
 - <a href="https://www.phind.com/" target="_blank">Phind</a> - Good for STEM related queries.
+- <a href="https://chat.together.ai/" target="_blank">Together AI Chat</a> - Use DeepSeek R1 for free hosted in the US.
