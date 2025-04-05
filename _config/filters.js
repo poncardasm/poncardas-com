@@ -42,4 +42,14 @@ export default function (eleventyConfig) {
 	eleventyConfig.addFilter("sortAlphabetically", (strings) =>
 		(strings || []).sort((b, a) => b.localeCompare(a))
 	);
+
+	// Add lazy loading to markdown images
+	const markdownIt = eleventyConfig.getInstanceOf("markdown-it");
+	const defaultRender = markdownIt.renderer.rules.image;
+	markdownIt.renderer.rules.image = (tokens, idx, options, env, self) => {
+		const token = tokens[idx];
+		token.attrSet("loading", "lazy");
+		token.attrSet("decoding", "async");
+		return defaultRender(tokens, idx, options, env, self);
+	};
 }
