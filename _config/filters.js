@@ -1,4 +1,5 @@
 import { DateTime } from "luxon";
+import MarkdownIt from "markdown-it";
 
 export default function (eleventyConfig) {
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
@@ -43,13 +44,27 @@ export default function (eleventyConfig) {
 		(strings || []).sort((b, a) => b.localeCompare(a))
 	);
 
-	// Add lazy loading to markdown images
-	const markdownIt = eleventyConfig.getInstanceOf("markdown-it");
-	const defaultRender = markdownIt.renderer.rules.image;
-	markdownIt.renderer.rules.image = (tokens, idx, options, env, self) => {
+	// Configure markdown-it with lazy loading for images
+	const md = MarkdownIt({
+		html: true,
+		breaks: true,
+		linkify: true,
+	});
+
+	// Store the default renderer
+	const defaultRender =
+		md.renderer.rules.image ||
+		((tokens, idx, options, env, self) => {
+			return self.renderToken(tokens, idx, options);
+		});
+
+	// Override image renderer to add lazy loading
+	md.renderer.rules.image = (tokens, idx, options, env, self) => {
 		const token = tokens[idx];
 		token.attrSet("loading", "lazy");
 		token.attrSet("decoding", "async");
 		return defaultRender(tokens, idx, options, env, self);
 	};
+
+	eleventyConfig.setLibrary("md", md);
 }
